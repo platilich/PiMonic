@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+    background-color: black;
+}
+
+
+header {
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+
+    padding: 1%;
+
+    padding-left: 5%;
+
+
+
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin: 1%;
+}
+
+
+
+.block {
+    display: inline-grid;
+    background-color: #282c34;
+    border-radius: 55px;
+    padding: 20px;
+
+    margin: 5%;
+    text-align: center;
+
+}

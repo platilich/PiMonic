@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raspberry DashBoard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/css.css') }}">
+    <meta http-equiv="refresh" content="10">
+</head>
+<body>
+    <header>
+        <h1>Welcome, Alex!</h1>
+    </header>
+
+    <main>
+        <div class="block">
+            <h2><b>Memory</b></h2>
+            <h2>{{ disk_static[0] }}% Busy</h2>
+            <h2>{{ disk_static[1] }}/{{ disk_static[3] }} GB use</h2>
+
+        </div>
+
+        <div class="block">
+            <h1>Connect via ssh</h1>
+            <p>{{ ssh }}</p>
+        </div>
+
+        <div class='block'>
+            <h2><b>Memory usage</b></h2>
+            <h2>{{ memory_static }}%</h2>
+        </div>
+
+        <div class="block">
+            <h2><b>Network Traffic </b>In: {{ network_traffic[0] }} MB/s | Out: {{ network_traffic[1] }} MB/s</h2>
+            <h2><b>IP address </b>{{ ip_address }}</h2>
+
+        </div>
+
+
+        <div class="block">
+            <h2>CPU Usage</h2>
+            <p>{{ cpu_static }}</p>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </main>
+</body>
+</html>
