@@ -2,7 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for
 import psutil
 import requests
 import getpass
-
+from datetime import datetime
+import distro
 
 app = Flask(__name__)
 @app.route('/')
@@ -79,6 +80,22 @@ def connect_ssh():
     return f'ssh {username}@{get_external_ip()}'
 
 
+
+def get_uptime():
+    """Возвращает число полных дней работы системы."""
+    boot_ts = psutil.boot_time()                 # время загрузки (в секундах)
+    now_ts  = datetime.now().timestamp() # текущее время (в секундах)
+    diff_sec = now_ts - boot_ts                   # разница в секундах
+    uptime = int(diff_sec // (24 * 60 * 60))         # целое число дней
+    return uptime
+
+
+
+def get_name_os():
+    return distro.name()
+
+
+
 @app.route('/', methods=['POST', 'GET'])
 def submit():
     if request.method == 'POST':
@@ -100,12 +117,14 @@ def dashboard():
     # возрат данных только по get
     return render_template(
         template_name_or_list='dashboard.html',
+        system=get_name_os(),
         disk_static=get_disk_usage(),
         cpu_static=get_cpu_usage(),
         memory_static=get_memory_usage(),
         ip_address=get_external_ip(),
         network_traffic=get_network_traffic(),
-        ssh=connect_ssh()
+        ssh=connect_ssh(),
+        uptime=get_uptime()
 
     )
 

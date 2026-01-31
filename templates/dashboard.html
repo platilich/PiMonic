@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Raspberry DashBoard</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/css.css') }}">
     <meta http-equiv="refresh" content="10">
@@ -13,35 +14,44 @@
 
     <main>
         <div class="block">
-            <h2><b>Memory</b></h2>
-            <h2>{{ disk_static[0] }}% Busy</h2>
-            <h2>{{ disk_static[1] }}/{{ disk_static[3] }} GB use</h2>
-
+            <h2>{{ system }}</h2>
         </div>
 
         <div class="block">
-            <h1>Connect via ssh</h1>
+            <h2>Memory</h2>
+            <p>{{ disk_static[1] }} / {{ disk_static[3] }} GB use</p>
+        </div>
+
+        <div class="block">
+            <h2>Connect via SSH</h2>
             <p>{{ ssh }}</p>
         </div>
 
         <div class='block'>
-            <h2><b>Memory usage</b></h2>
-            <h2>{{ memory_static }}%</h2>
+            <h2>RAM</h2>
+            <p>{{ memory_static }}%</p>
         </div>
 
         <div class="block">
-            <h2><b>Network Traffic </b>In: {{ network_traffic[0] }} MB/s | Out: {{ network_traffic[1] }} MB/s</h2>
-            <h2><b>IP address </b>{{ ip_address }}</h2>
+            <h2>Network Traffic</h2>
+            <p>↓ {{ network_traffic[0] }} Mb/s ↑ {{ network_traffic[1] }} Mb/s</p>
+        </div>
 
+        <div class="block">
+            <h2>Public IP</h2>
+            <p>{{ ip_address }}</p>
         </div>
 
 
         <div class="block">
-            <h2>CPU Usage</h2>
-            <p>{{ cpu_static }}</p>
-
+            <h2>CPU</h2>
+            <p>{{ cpu_static }}% cores</p>
         </div>
 
+        <div class="block">
+            <h2>Uptime</h2>
+            <p>{{ uptime }} days</p>
+        </div>
 
 
 
@@ -52,5 +62,10 @@
 
 
     </main>
+
+
+    <footer>
+        <p>All rights reserved 2026</p>
+    </footer>
 </body>
 </html>
