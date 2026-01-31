@@ -5,6 +5,9 @@ import getpass
 from datetime import datetime
 import distro
 
+
+print('welcome!!!')
+
 app = Flask(__name__)
 @app.route('/')
 def hello_world():
