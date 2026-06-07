@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Raspberry DashBoard</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/css.css') }}">
-    <meta http-equiv="refresh" content="10">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header>
-        <h1>Welcome, Alex!</h1>
+        <h1>PiMoic</h1>
     </header>
 
     <main>
         <div class="block">
-            <h2>{{ system }}</h2>
+            <h2>Operation system</h2>
+            <p>{{ system }}</p>
         </div>
 
         <div class="block">
@@ -52,20 +52,17 @@
             <h2>Uptime</h2>
             <p>{{ uptime }} days</p>
         </div>
-
-
-
-
-
-
-
-
-
     </main>
 
 
+
     <footer>
-        <p>All rights reserved 2026</p>
+        <p>Plat Ilich</p>
+        <p>Весь код открыт и доступен на <a href="https://github.com/platilich">GitHub</a></p>
     </footer>
+
+
+    <script src="../static/js/script.js"></script>
+
 </body>
 </html>
