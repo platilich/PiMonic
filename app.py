@@ -1,14 +1,15 @@
 from flask import Flask, render_template, redirect, url_for, jsonify
 
 from utils import *
-
-
+from config import key
 
 
 
 
 app = Flask(__name__)
-app.secret_key = 'your-secret-key-123'
+
+
+app.secret_key = key
 
 
 
@@ -64,4 +65,4 @@ def api_dashboard():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='127.0.0.1', port=5000)
+    app.run(host='0.0.0.0')
