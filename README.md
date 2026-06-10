@@ -1,4 +1,4 @@
-![запуск на ubuntu server*](image.png
+![запуск на ubuntu server*](image.png)
 # 🍓 PiMonic
 Web-based resource monitoring for Raspberry Pi (and other servers)
 
