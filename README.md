@@ -1,5 +1,6 @@
-# PiMonic
+# 🍓 PiMonic
 Web-based resource monitoring for Raspberry Pi (and other servers)
+
 
 ## Functions
 
@@ -12,12 +13,11 @@ Web-based resource monitoring for Raspberry Pi (and other servers)
 * **Auto-refresh:** The dashboard automatically updates every 10 seconds.
 
 
-------------
 
 
 ## How to Run
 
-### 1. Installing Python and a virtual environment
+### Installing Python and a virtual environment
 
 
 ```bash
@@ -31,7 +31,7 @@ source venv/bin/activate
 
 ```
 
-### 2. Install Dependencies
+### Install Dependencies
 
 Install the required Python libraries using pip:
 
@@ -40,19 +40,17 @@ pip install requirements.txt
 
 ```
 
-
-
-### 4. Start the Application
-
-#### Generate a secret key:
+### Generate a secret key:
 
 ```bash
 openssl rand -hex 32
 ```
 
 
-#### Specify it in the key variable in config.py
+### Specify it in the key variable in config.py
 
+
+### Run the code
 
 ```bash
 python app.py
@@ -60,9 +58,10 @@ python app.py
 
 
 
-#### Open your browser and navigate to: `http://your_external_ip:5500`
+### Open your browser and navigate to: `http://your_external_ip:5500`
 
 
+### Ready
 
 
 ---
