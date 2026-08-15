@@ -23,13 +23,14 @@
 
 body {
     font-family: "Sour Gummy", sans-serif;
+    color: #f4f0ff;
 
     background:
     radial-gradient(
         circle at top center,
-        #c4b5e8 0%,
-        #a5b4fc 35%,
-        #e0d4f7 100%
+        #5b21b6 0%,
+        #1e1b4b 35%,
+        #020617 100%
     );
 
 
@@ -44,32 +45,30 @@ body {
 
 
 
-
-
-
     min-height: 100vh;
 
 
 }
 
 
-
 header, main, footer {
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(20px);
+    margin: 2%;
+}
 
 
 
 
-    padding: 2%;
-    margin: 1%;
+header {
+    background-color: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
 
+
+    padding: 0.3% 1% 0.3% 1%;
 
     border-radius: var(--border-radius);
-
-
-
 }
+
 
 
 
@@ -78,6 +77,10 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
+
+    backdrop-filter: blur(12px);
+
+    border-radius: var(--border-radius);
 
     flex: 1;
 
@@ -101,8 +104,14 @@ main {
     justify-content: center;
 
 
-    border: 2px solid rgba(255, 255, 255, 0.576);
-    backdrop-filter: blur(55px);
+    background-color: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+
 
 
     border-radius: var(--border-radius);
@@ -118,11 +127,21 @@ footer {
     display: flex;
     justify-content: space-between;
 
+
+    background-color: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+
+    padding: 0.3% 1% 0.3% 1%;
+
+
+
+    border-radius: var(--border-radius);
 }
 
 
 a {
-    color: black;
+    color: #ddd6fe;
 }
 
 
